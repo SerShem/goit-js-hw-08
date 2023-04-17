@@ -9,11 +9,11 @@ const galleryImages = galleryItems
 		<img class="gallery__image" src="${galleryItems.preview}" alt="${galleryItems.description}"/>
 	</a>`, '');
 
-/* galleryConteiner.innerHTML = galleryImages;
+galleryConteiner.innerHTML = galleryImages;
 
 new SimpleLightbox(".gallery a", {
 	captionType: 'attr',
 	captionsData: 'alt',
 	captionPosition: 'bottom',
 	captionDelay: 250,
-}); */
+});
