@@ -12,18 +12,9 @@ const galleryImages = galleryItems
 
 galleryConteiner.innerHTML = galleryImages;
 
-const galleryLinks = document.querySelectorAll('.gallery__item');
-
-galleryLinks.forEach(link => {
-	link.addEventListener('click', e => {
-		e.preventDefault();
-		const originalImageSrc = link.getAttribute('href');
-		const gallery = new SimpleLightbox(`<a href="${originalImageSrc}"><img src="${imageSrc}" alt="${link.querySelector('img').getAttribute('alt')}"></a>`, {
-			captionType: 'attr',
-			captionsData: 'alt',
-			captionPosition: 'bottom',
-			captionDelay: 250,
-		});
-		gallery.open();
-	});
+new SimpleLightbox(".gallery a", {
+	captionType: 'attr',
+	captionsData: 'alt',
+	captionPosition: 'bottom',
+	captionDelay: 250,
 });
